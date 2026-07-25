@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="852.0" prefWidth="393.0" spacing="20.0" style="-fx-background-color: #312F2F;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.kickthebucketapp.MainMenuController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Region prefHeight="96.0" prefWidth="353.0" />
+   <ImageView fitHeight="212.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true" x="91.0" y="125.0">
+      <image>
+         <Image url="@../images/KickTheBucketLogo.png" />
+      </image>
+   </ImageView>
+
+    <Label fx:id="welcomeText" />
+    <Button onAction="#handleViewGoalsButton" prefHeight="78.0" prefWidth="267.0" style="-fx-background-radius: 200;" text="View Goals">
+      <font>
+         <Font size="32.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin></Button>
+   <Button mnemonicParsing="false" onAction="#handleJournalButton" prefHeight="78.0" prefWidth="267.0" style="-fx-background-radius: 200;" text="Journal">
+      <font>
+         <Font size="32.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#handleProfileButton" prefHeight="78.0" prefWidth="267.0" style="-fx-background-radius: 200;" text="Profile">
+      <font>
+         <Font size="32.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#handlePhotoAlbumButton" prefHeight="78.0" prefWidth="267.0" style="-fx-background-radius: 200;" text="Photo Album">
+      <font>
+         <Font size="32.0" />
+      </font>
+   </Button>
+</VBox>

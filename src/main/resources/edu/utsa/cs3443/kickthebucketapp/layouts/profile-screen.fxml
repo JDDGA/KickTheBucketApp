@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="852.0" prefWidth="393.0" style="-fx-background-color: #312F2F;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.kickthebucketapp.ProfileController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <Button mnemonicParsing="false" onAction="#handleReturn" style="-fx-background-radius: 20;" text="&lt;--" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </left>
+         <center>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Profile" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <right>
+            <Region prefHeight="39.0" prefWidth="51.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+      <Separator halignment="LEFT" prefHeight="0.0" prefWidth="393.0" translateY="-60.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+   </children>
+</VBox>

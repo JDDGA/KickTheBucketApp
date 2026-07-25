@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="393.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="852.0" prefWidth="393.0" style="-fx-background-color: #312F2F;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.kickthebucketapp.GoalsController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="393.0">
+         <left>
+            <Button mnemonicParsing="false" onAction="#handleReturn" style="-fx-background-radius: 20;" text="&lt;--" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </left>
+         <center>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="102.0" style="-fx-background-color: #4A4A4A; -fx-background-radius: 20; -fx-back: 0;" text="Goals" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <right>
+            <Region prefHeight="39.0" prefWidth="51.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+      <Separator halignment="LEFT" prefHeight="0.0" prefWidth="393.0" translateY="-60.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Separator>
+      <Label alignment="CENTER" prefHeight="63.0" prefWidth="285.0" text="Check the box to complete the goal and send it to the journal!" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" translateY="-50.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" maxWidth="325.0" prefHeight="495.0" prefWidth="325.0" style="-fx-background-color: #312f2f; -fx-background: #312f2f;" translateY="-30.0">
+         <content>
+            <VBox fx:id="goalsContainer" prefWidth="320.0" spacing="10.0" style="-fx-background-color: #312F2F;" />
+         </content>
+      </ScrollPane>
+      <Button mnemonicParsing="false" onAction="#handleAddGoal" prefHeight="82.0" prefWidth="227.0" style="-fx-background-radius: 200; -fx-background-color: #88BD8E;" text="Add New Goal" translateY="-30.0">
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
