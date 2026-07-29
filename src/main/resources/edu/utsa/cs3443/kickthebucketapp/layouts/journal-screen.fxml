@@ -34,5 +34,15 @@
             <Insets />
          </VBox.margin>
       </Separator>
+      <Label alignment="CENTER" prefHeight="63.0" prefWidth="285.0" text="Every goal you complete shows up here. Tap an entry to add a reflection!" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" translateY="-50.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" maxWidth="325.0" prefHeight="620.0" prefWidth="325.0" style="-fx-background-color: #312f2f; -fx-background: #312f2f;" translateY="-30.0">
+         <content>
+            <VBox fx:id="journalContainer" prefWidth="320.0" spacing="10.0" style="-fx-background-color: #312F2F;" />
+         </content>
+      </ScrollPane>
    </children>
 </VBox>

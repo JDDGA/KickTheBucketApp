@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -34,5 +35,63 @@
             <Insets />
          </VBox.margin>
       </Separator>
+      <StackPane translateY="-40.0">
+         <ImageView fx:id="avatarImageView" fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #4A4A4A; -fx-background-radius: 70;" />
+      </StackPane>
+      <Button mnemonicParsing="false" onAction="#handleChangePhoto" style="-fx-background-radius: 20; -fx-background-color: #4A4A4A; -fx-text-fill: white;" text="Change Photo" translateY="-30.0" />
+      <Label alignment="CENTER" prefWidth="285.0" text="Name" textFill="WHITE" translateY="-15.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" maxWidth="285.0" promptText="Your name" translateY="-15.0" />
+      <Label alignment="CENTER" prefWidth="285.0" text="Bio" textFill="WHITE" translateY="0.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <TextArea fx:id="bioField" maxWidth="285.0" prefHeight="100.0" promptText="A little about yourself..." wrapText="true" />
+      <Button mnemonicParsing="false" onAction="#handleSave" prefHeight="55.0" prefWidth="227.0" style="-fx-background-radius: 200; -fx-background-color: #88BD8E;" text="Save Profile" translateY="10.0">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Separator prefWidth="285.0">
+         <VBox.margin>
+            <Insets bottom="10.0" top="25.0" />
+         </VBox.margin>
+      </Separator>
+      <HBox alignment="CENTER" spacing="15.0">
+         <VBox alignment="CENTER" style="-fx-background-color: #4A4A4A; -fx-background-radius: 12; -fx-padding: 10;" prefWidth="80.0">
+            <Label fx:id="activeGoalsLabel" text="0" textFill="#88BD8E">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Active" textFill="WHITE" />
+         </VBox>
+         <VBox alignment="CENTER" style="-fx-background-color: #4A4A4A; -fx-background-radius: 12; -fx-padding: 10;" prefWidth="80.0">
+            <Label fx:id="completedGoalsLabel" text="0" textFill="#88BD8E">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Completed" textFill="WHITE" wrapText="true" />
+         </VBox>
+         <VBox alignment="CENTER" style="-fx-background-color: #4A4A4A; -fx-background-radius: 12; -fx-padding: 10;" prefWidth="80.0">
+            <Label fx:id="photoCountLabel" text="0" textFill="#88BD8E">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Photos" textFill="WHITE" />
+         </VBox>
+      </HBox>
    </children>
 </VBox>

@@ -34,5 +34,23 @@
             <Insets />
          </VBox.margin>
       </Separator>
+      <Label alignment="CENTER" prefHeight="42.0" prefWidth="285.0" text="Capture the moments from your bucket list!" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" translateY="-50.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" maxWidth="325.0" prefHeight="560.0" prefWidth="325.0" style="-fx-background-color: #312f2f; -fx-background: #312f2f;" translateY="-30.0">
+         <content>
+            <FlowPane fx:id="albumContainer" hgap="10.0" vgap="10.0" prefWidth="320.0" style="-fx-background-color: #312F2F;" />
+         </content>
+      </ScrollPane>
+      <Button mnemonicParsing="false" onAction="#handleAddPhoto" prefHeight="82.0" prefWidth="227.0" style="-fx-background-radius: 200; -fx-background-color: #88BD8E;" text="Add Photo" translateY="-20.0">
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
    </children>
 </VBox>

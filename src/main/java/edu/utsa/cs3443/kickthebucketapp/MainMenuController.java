@@ -16,22 +16,6 @@ public class MainMenuController {
     @FXML
     private Label welcomeText;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
-
-    @FXML
-    private Button viewGoalsButton;
-
-    @FXML
-    private Button journalButton;
-
-    @FXML
-    private Button profileButton;
-
-    @FXML
-    private Button photoAlbumButton;
 
     @FXML
     private void handleViewGoalsButton(ActionEvent event) throws IOException {

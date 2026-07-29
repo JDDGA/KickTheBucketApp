@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                edu.utsa.cs3443.kickthebucketapp/edu.utsa.cs3443.kickthebucketapp.KickTheBucketApplication
+                                edu.utsa.cs3443.kickthebucketapp.KickTheBucketApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
