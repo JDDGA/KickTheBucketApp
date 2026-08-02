@@ -10,7 +10,7 @@ to track their statistics. It contains a main menu, a View Goals screen, a Journ
 
 Instructions:
 
-Run in intelliJ to open, does not require and prerequisites.
+Run in intelliJ to open, does not require any prerequisites.
 
 Known Issues:
 
