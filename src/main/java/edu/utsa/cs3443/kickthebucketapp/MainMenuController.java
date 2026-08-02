@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Node;
@@ -13,9 +13,10 @@ import javafx.event.ActionEvent;
 import java.io.IOException;
 
 public class MainMenuController {
-    @FXML
-    private Label welcomeText;
 
+    /**
+     *  Sends user to the View Goals screen (GoalsController and goals-screen)
+    */
 
     @FXML
     private void handleViewGoalsButton(ActionEvent event) throws IOException {
@@ -27,6 +28,10 @@ public class MainMenuController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    /**
+     *  Sends user to the Journal screen (JournalController and journal-screen)
+     */
     @FXML
     private void handleJournalButton(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/kickthebucketapp/layouts/journal-screen.fxml"));
@@ -36,6 +41,10 @@ public class MainMenuController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    /**
+     *  Sends user to the Profile screen (ProfileController and profile-screen)
+     */
     @FXML
     private void handleProfileButton(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/kickthebucketapp/layouts/profile-screen.fxml"));
@@ -45,6 +54,10 @@ public class MainMenuController {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
+    /**
+     *  Sends user to the Photo Album screen (AlbumController and photoalbum-screen)
+     */
     @FXML
     private void handlePhotoAlbumButton(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/kickthebucketapp/layouts/photoalbum-screen.fxml"));
