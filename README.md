@@ -17,3 +17,8 @@ For testing purposes, have image files ready for the Photo Album screen and Prof
 Known Issues:
 
 No known issues currently.
+
+
+UML:
+
+<img width="1053" height="567" alt="image" src="https://github.com/user-attachments/assets/6f7fba07-1a72-466a-9791-ec37204abc82" />
