@@ -18,11 +18,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Optional;
 
+/**
+ * controls the goals screen and manages all active goals
+*/
 public class GoalsController {
 
-    /**
-     * Vbox inside the scroll pane where every created goal is placed
-     */
     @FXML
     private VBox goalsContainer;
 

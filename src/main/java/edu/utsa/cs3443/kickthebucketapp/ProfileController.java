@@ -21,6 +21,9 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * controls profile screen and manages all the user's information
+*/
 public class ProfileController {
 
     @FXML
@@ -41,7 +44,9 @@ public class ProfileController {
     @FXML
     private Label photoCountLabel;
 
-
+    /**
+     * loads up all the saved info of the profile and refreshes the statistics
+    */
     @FXML
     public void initialize() {
         nameField.setText(ProfileData.name);
@@ -50,6 +55,10 @@ public class ProfileController {
         refreshStats();
     }
 
+    /**
+     * Return to menu button (arrow in the top left of every screen except the main screen)
+     * Throws IOException if the main-menu FXML file cannot be loaded (most likely a file pathing issue)
+     */
     @FXML
     private void handleReturn(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/kickthebucketapp/layouts/main-menu.fxml"));
@@ -60,6 +69,9 @@ public class ProfileController {
         stage.show();
     }
 
+    /**
+     * Opens a file chooser which will allow the user to pick a profile photo
+    */
     @FXML
     private void handleChangePhoto(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
@@ -76,6 +88,9 @@ public class ProfileController {
         }
     }
 
+    /**
+     * saves the name and bio the user typed in
+    */
     @FXML
     private void handleSave(ActionEvent event) {
         ProfileData.name = nameField.getText() == null ? "" : nameField.getText().trim();
@@ -88,6 +103,9 @@ public class ProfileController {
         confirmation.showAndWait();
     }
 
+    /**
+     * loads the currently chosen profile image if one was previously added
+    */
     private void loadAvatar() {
         if (ProfileData.avatarPath != null) {
             try {
@@ -98,6 +116,10 @@ public class ProfileController {
         }
     }
 
+    /**
+     * will refresh the displayed profile stats to show the current number of
+     * active goals, completed goals and photos
+    */
     private void refreshStats() {
         activeGoalsLabel.setText(String.valueOf(GoalData.activeGoals.size()));
         completedGoalsLabel.setText(String.valueOf(GoalData.completedGoals.size()));

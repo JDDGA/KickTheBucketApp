@@ -21,18 +21,29 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Optional;
 
+/**
+ * Controls the journal screen, manages completed goals and optional reflection
+*/
 public class JournalController {
 
 
     @FXML
     private VBox journalContainer;
 
+    /**
+    * Syncs the data from completed goals to JournalData and then refreshes
+     * the journal display
+    */
     @FXML
     public void initialize() {
         JournalData.syncFromGoals();
         refreshJournal();
     }
 
+    /**
+     * Return to menu button (arrow in the top left of every screen except the main screen)
+     * Throws IOException if the main-menu FXML file cannot be loaded (most likely a file pathing issue)
+     */
     @FXML
     private void handleReturn(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/kickthebucketapp/layouts/main-menu.fxml"));
@@ -43,6 +54,10 @@ public class JournalController {
         stage.show();
     }
 
+    /**
+     *  Clears and rebuilds the journal to display current journal entries
+     *  will also display a message if no goals have been completed yet
+    */
     private void refreshJournal() {
         journalContainer.getChildren().clear();
 
@@ -58,6 +73,10 @@ public class JournalController {
         }
     }
 
+    /**
+     * Creates the visual for journal entries which consists of the completed goal,
+     * the date the goal was completed, note button and delete button
+    */
     private void createJournalRow(JournalEntry entry) {
 
         Label goalLabel = new Label(entry.getGoalText());

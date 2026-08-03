@@ -23,16 +23,26 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
 
+/**
+ * controls the photo album screen and manages photos
+*/
 public class AlbumController {
 
     @FXML
     private FlowPane albumContainer;
 
+    /**
+     * Refreshes the current album so all currently stored photos are displayed
+    */
     @FXML
     public void initialize() {
         refreshAlbum();
     }
 
+    /**
+     * Return to menu button (arrow in the top left of every screen except the main screen)
+     * Throws IOException if the main-menu FXML file cannot be loaded (most likely a file pathing issue)
+     */
     @FXML
     private void handleReturn(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/edu/utsa/cs3443/kickthebucketapp/layouts/main-menu.fxml"));
@@ -43,6 +53,11 @@ public class AlbumController {
         stage.show();
     }
 
+    /**
+     * Will open a file chooser which will give the user an option to select an
+     * image and an option to enter a caption. When a photo is added the album
+     * display will refresh.
+     */
     @FXML
     private void handleAddPhoto(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
@@ -69,6 +84,11 @@ public class AlbumController {
         refreshAlbum();
     }
 
+    /**
+    * will clear and rebuild the photo album display using all current photos
+     * stored inside albumData, and will display an instruction message if
+     * the photo album is currently empty
+    */
     private void refreshAlbum() {
         albumContainer.getChildren().clear();
 
@@ -84,6 +104,10 @@ public class AlbumController {
         }
     }
 
+    /**
+    * creates the visual tile for a photo containing the image, caption, and
+     * a delete button. The completed tile of the image is added to album container
+    */
     private void createPhotoTile(Photo photo) {
 
         ImageView imageView = new ImageView();

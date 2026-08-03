@@ -10,6 +10,9 @@ import javafx.scene.Node;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 
+/**
+ * controls the main menu and handles navigation to the other screens
+*/
 public class MainMenuController {
 
     /**
