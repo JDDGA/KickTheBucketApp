@@ -10,7 +10,9 @@ to track their statistics. It contains a main menu, a View Goals screen, a Journ
 
 Instructions:
 
-Run in intelliJ to open, does not require and prerequisites.
+Run in intelliJ to open, does not require any prerequisites.
+
+For testing purposes, have image files ready for the Photo Album screen and Profile Screen, as they can be used there.
 
 Known Issues:
 
